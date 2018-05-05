@@ -2,7 +2,8 @@
 /**
  * @link https://github.com/abolotin/yii2-unique-id/
  * @copyright Copyright (c) 2018 Anton Bolotin
- * @license https://github.com/abolotin/yii2-unique-id/license/
+ * @license GPL v3
+ * @version 1.0b
  */
 
 namespace abolotin\yii2;
