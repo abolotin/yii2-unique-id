@@ -1,3 +1,4 @@
+
 # Unique widget's IDs generator
 Generating unique identificator for any purposes. Typically used by Yii-widgets ("id"-attribute of HTML elements).
 
@@ -48,6 +49,10 @@ In last case it's can be also configured.
 Component allows next configuration options:
 
 **prefix** - string. First prefix, used by generator. Default value: 'w'.
+
 **autoIdPrefix** - string. Second prefix, used by generator. If unspecified, will be generated automatically.
+
 **counter** - integer. Inner generated IDs counter. Default value: 0.
+
 **suffix** - string. Suffix of inner generated ID. Default value: 't'.
+
