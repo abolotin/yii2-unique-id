@@ -37,7 +37,7 @@ You're can to setup automatic generation of IDs by any \yii\base\Widget based ob
 return [
    ...
    'bootstrap' => [
-       '\abolotin\yii2\UniqueId',
+       '\\abolotin\\yii2\\UniqueId',
        ...
    ]
 ];
@@ -50,7 +50,7 @@ return [
    ...
    'components' => [
        'uniqueId' => [
-           'class' => '\abolotin\yii2\UniqueId',
+           'class' => '\\abolotin\\yii2\\UniqueId',
            ...
        ],
        ...
