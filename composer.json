@@ -16,5 +16,10 @@
             "name": "Anton Bolotin",
             "email": "a.y.bolotin@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "abolotin\\yii2\\": ""
+        }
+    }
 }
