@@ -11,11 +11,11 @@ Such behaviour may be bypassed by specifying ID manually in code. Another way is
 
 You can use the composer package manager to install. Either run:
 
-$ php composer.phar require abolotin/yii2-unique-id "@dev"
+$ php composer.phar require abolotin/yii2-unique-id
 
 or add:
 
-"abolotin/yii2-unique-id": "@dev"
+"abolotin/yii2-unique-id": ""
 
 to your composer.json file
 
