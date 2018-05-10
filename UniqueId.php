@@ -14,9 +14,13 @@ namespace abolotin\yii2;
  */
 class UniqueId extends \yii\base\Component {
     /**
-     * @var string the prefix of ID, which will be used while generating
+     * @var string the prefix of ID, which will be used while Widget generating
      */
-    public static $prefix='w';
+    public static $widgetPrefix='w';
+    /**
+     * @var string the prefix of ID, which will be used while Pjax widget generating
+     */
+    public static $pjaxPrefix='p';
     /**
      * @var string the automatically generated prefix of ID, which will be used while generating
      */
@@ -47,15 +51,25 @@ class UniqueId extends \yii\base\Component {
         parent::__construct($config);
 
         // Initializing standard \yii\base\Widget's ID generator
-        \yii\base\Widget::$autoIdPrefix=(static::$prefix ? static::$prefix : \yii\base\Widget::$autoIdPrefix) . static::getAutoIdPrefix();
+        \yii\base\Widget::$autoIdPrefix=(static::$widgetPrefix ? static::$widgetPrefix : \yii\base\Widget::$autoIdPrefix) . static::getAutoIdPrefix();
+        // Initializing standard \yii\base\Widget's ID generator
+        \yii\widgets\Pjax::$autoIdPrefix=(static::$pjaxPrefix ? static::$pjaxPrefix : \yii\widgets\Pjax::$autoIdPrefix) . static::getAutoIdPrefix();
     }
 
     /**
-     * Setter for static proterty $prefix. Typically can be used while component initializing.
+     * Setter for static proterty $widgetPrefix. Typically can be used while component initializing.
      * @param string $value
      */
-    public function setPrefix($value) {
-        static::$prefix=$value;
+    public function setWidgetPrefix($value) {
+        static::$widgetPrefix=$value;
+    }
+
+    /**
+     * Setter for static proterty $pjaxPrefix. Typically can be used while component initializing.
+     * @param string $value
+     */
+    public function setPjaxPrefix($value) {
+        static::$pjaxPrefix=$value;
     }
 
     /**
@@ -95,7 +109,7 @@ class UniqueId extends \yii\base\Component {
      * May be used for manual assigning unique ID in code.
      */
     public static function getId() {
-        static::$_last_id=(static::$prefix ? static::$prefix : \yii\base\Widget::$autoIdPrefix) . static::getAutoIdPrefix() . static::$counter++ . static::$suffix;
+        static::$_last_id=(static::$widgetPrefix ? static::$widgetPrefix : \yii\base\Widget::$autoIdPrefix) . static::getAutoIdPrefix() . static::$counter++ . static::$suffix;
         return static::$_last_id;
     }
 
