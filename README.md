@@ -68,7 +68,9 @@ In last case it's can be also configured.
 
 Component allows next configuration options:
 
-**prefix** - string. First prefix, used by generator. Default value: 'w'.
+**widgetPrefix** - string. First prefix, used by widget generator. Default value: 'w'.
+
+**pjaxPrefix** - string. First prefix, used by Pjax widget generator. Default value: 'p'.
 
 **autoIdPrefix** - string. Second prefix, used by generator. If unspecified, will be generated automatically.
 
